@@ -20,7 +20,7 @@
     padding: 30px 52px;       
     box-sizing: border-box;
   }
-  .title{
-    color:#FFFFFF;
-    font-family: "Gotham";
-  }
+  .title {
+    color: #FFFFFF;
+    font-family: 'Gotham', sans-serif; /* Use Gotham font if loaded */
+}
