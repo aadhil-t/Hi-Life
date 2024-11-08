@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.bg-image {
+    background-image: url("C:/Users/Sana/Desktop/hi-life/image/home-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;            
+    background-position: center;    
+    background-attachment: fixed;    
+    height: 100vh;                     
+    width: 100%;                      
+}
+
+.container {
+    width: 100%;            
+    height: 100svh;           
+    padding: 30px 52px;       
+    box-sizing: border-box;
+  }
+  .title{
+    color:#FFFFFF;
+    font-family: "Gotham";
+  }
