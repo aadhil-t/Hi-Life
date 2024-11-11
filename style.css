@@ -61,6 +61,18 @@
 .second-sec-content{
     padding-top: 76px;
 }
+.second-sec-content h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30.17px;
+    font-weight: 400;
+    line-height: 29.6px;
+}
+.second-sec-content span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 50.39px;
+    font-weight: 600;
+    line-height: 49.43px;
+}
 .qrcode{
     width: 76.51px;
     height: 82.25px;
