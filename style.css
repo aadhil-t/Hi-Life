@@ -1,3 +1,11 @@
+
+@font-face {
+    font-family: 'Gilroy Light';
+    src: url('assets/Gilroy-Light.otf') format('opentype');
+    font-weight: 400; /* Adjust this if necessary */
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -10,10 +18,10 @@
 .flex-justify{
     display: flex;
     justify-content: space-between;
-    gap: 28px;
+    /* gap: 28px; */
 }
 .bg-image {
-    background-image: url("C:/Users/HP/Desktop/Hi-Life/Hi-Life/image/home-bg.png");
+    background-image: url("C:/Users/Sana/Desktop/Hi-Life-New/Hi-Life/image/home-bg.png");
     background-repeat: no-repeat;
     background-size: cover;            
     background-position:center;    
@@ -62,10 +70,12 @@
     padding-top: 76px;
 }
 .second-sec-content h2{
-    font-family: 'Poppins', sans-serif;
+    font-family:'Gilroy Light',sans-serif;  
     font-size: 30.17px;
     font-weight: 400;
     line-height: 29.6px;
+    padding-bottom: 27px;
+    color: #FFFFFF;
 }
 .second-sec-content span{
     font-family: 'Poppins', sans-serif;
@@ -76,6 +86,125 @@
 .qrcode{
     width: 76.51px;
     height: 82.25px;
+}
+.qr-content{
+    font-family: 'Montserrat', sans-serif;  
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.04px;
+    padding: 14px;
+}
+.qr-content p {
+    margin: 0; 
+    padding-bottom: 6px; 
+}
+.loc-p-bg-color{
+    display: flex;
+    justify-content: center;
+    gap: 11px;
+    /* align-items: flex-end; */
+    background: linear-gradient(to right, #3e8b38, #5add65);
+    width: 18rem;
+    border-radius: 0 25px 0px 25px;
+}
+.loc-p-bg-color img{
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.loc-p-bg-color p{
+    font-family: 'Gotham', sans-serif;
+    color: #FFFFFF;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17.71px;
+}
+.villa-img{
+    padding-top: 46px;
+}
+.bhk-villa{  
+    gap: 90px;
+    padding-top: 60px;
+}
+.space{
+    width: 33.33%;
+}
+.bhk.space{
+    text-align: center;
+    color: #FFFFFF;
+}
+.bhk h2{
+    font-size: 25.94px;
+    font-weight: 700;
+    line-height: 33.9px;
+    padding-top: 10px;
+    font-family: 'Gotham', sans-serif;
+}
+.bhk span{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18.15px;
+    font-family: 'Gotham', sans-serif;  
+}
+.sqrt.space{
+    text-align: center;
+    color: #FFFFFF;
+}
+.sqrt h2{
+    padding-top: 10px;
+    font-family: 'Gotham', sans-serif;
+    font-size: 25.94px;
+    font-weight: 700;
+}
+.sqrt span{
+   font-family: 'Gotham', sans-serif;
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 33.9px;
+}
+
+.money.space{
+    text-align: center;
+    color: #FFFFFF;
+}
+.money h2{
+    padding-top: 10px;
+    font-family: 'Gotham', sans-serif;
+    font-size: 25.94px;
+    line-height: 33.9px;
+    font-weight: 500;
+}
+.money span{
+    font-size: 15.69px;
+    font-weight: 500;
+    line-height: 20.5px;
+    font-family: 'Gotham', sans-serif;
+}
+.loc-proximity{
+    font-family: 'Gotham', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.79px;
+    text-align: center;
+    color: #FEFEFE;
+    padding-top: 57px;
+}
+.project-highlight{
+    gap: 80px;
+}
+.prox-space{
+    width: 20%;
+}
+.ready-img {
+    display: flex;
+    background-color: #FEFEFE;
+    border-radius: 25px;
+    width: 48.08px;
+    height: 48.08px;
+    align-items: center;
+    justify-content: center;
 }
 .Button{
     background-color: red;
