@@ -192,12 +192,13 @@
     padding-top: 57px;
 }
 .project-highlight{
-    gap: 80px;
+    
+    gap: 40px;
 }
 .prox-space{
     width: 20%;
 }
-.ready-img {
+.img-circle {
     display: flex;
     background-color: #FEFEFE;
     border-radius: 25px;
