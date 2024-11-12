@@ -21,7 +21,7 @@
     /* gap: 28px; */
 }
 .bg-image {
-    background-image: url("C:/Users/Sana/Desktop/Hi-Life-New/Hi-Life/image/home-bg.png");
+    background-image: url("C:/Users/HP/Desktop/Hi-Life-new/Hi-Life/image/home-bg.png");
     background-repeat: no-repeat;
     background-size: cover;            
     background-position:center;    
@@ -190,13 +190,39 @@
     text-align: center;
     color: #FEFEFE;
     padding-top: 57px;
+    padding-bottom: 32px;
 }
 .project-highlight{
-    
     gap: 40px;
 }
-.prox-space{
+.Pristine-Villas{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px); 
+    border-radius: 0 25px 0px 25px;
+    padding-top: 36px;
+    padding-bottom: 50px;
+    color: #FFFFFF;
+}
+.Pristine-p{
+    padding-bottom: 44px;
+    font-size: 23px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 500;
+    line-height: 42.94px;
+}
+.prox-space {
+    display: flex;
     width: 20%;
+    flex-direction: column;
+    align-items: center;
+}
+.prox-space p{
+    font-family: 'Gotham', sans-serif;
+    font-size: 13.61px;
+    font-weight: 500;
+    line-height: 16.83px;
+    padding-top: 10.59px;
 }
 .img-circle {
     display: flex;
@@ -209,4 +235,9 @@
 }
 .Button{
     background-color: red;
+}
+.enquire-btn{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
 }
