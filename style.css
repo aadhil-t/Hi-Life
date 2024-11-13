@@ -36,6 +36,17 @@ body{
     justify-content: space-evenly;
 }
 
+
+.villa-sec{
+    display: flex;
+    justify-content: space-between;
+}
+.apartment-sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .bg-image {
     background-image: url("../Hi-Life/image/home-bg.png");
     background-repeat: no-repeat;
@@ -75,7 +86,14 @@ body{
 .villas{
     background-color: #264756;
     width: calc(50%);
+}
 
+.villa-banner{  
+    margin-left: 17rem;
+}
+.apartment-banar {
+    margin-left: 64rem;
+    margin-top: -22rem;
 }
 .Apartments{
     background-color: #0794D6;
@@ -247,6 +265,30 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width:1310px) {
+    .apartment-sec{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .villa-sec{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;   
+    }
+    .project-highlight{
+        gap: 0px;
+    }
+    .villa-banner{  
+        display: none;
+    }
+    .apartment-banar {
+       display: none;
+    }
+}
+
 .builder {
     display: flex;
     flex-direction: column;
@@ -351,63 +393,81 @@ body{
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    width: 100%;
-    max-width: 400px;
+    padding-left: 43px;
+    padding-right: 76px;  
+    padding-top: 47px; 
     z-index: 1;
-    margin-top: 10px;
-    margin-top: -51px;
+    margin-top: -60px;
+    padding-bottom: 48px;
+
 }
 
 /* Form Heading */
 .contact-form h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 30.68px;
+    padding-bottom: 9px;
     z-index: 1;
-
 }
 
 /* Form Group (for input and textarea) */
 .form-group {
-    margin-bottom: 20px;
+    position: relative;
+    padding-top: 24px;
     z-index: 1;
-
 }
 
 .form-group label {
-    display: block;
+    position: absolute;
+    top: 16px;
+    left: 12px;
+    background-color: #fff;
+    padding: 0 4px;
+    font-size: 0.9em;
     font-weight: bold;
-    margin-bottom: 5px;
-    color: #555;
-    z-index: 1;
-
+    transition: 0.3s ease-in-out;
 }
 
 .form-group input, 
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px 10px 10px; /* Extra padding at the top */
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    color: #333;
 }
 
 .form-group textarea {
     resize: vertical;
 }
 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px; /* Space for the arrow */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #fff;
+    appearance: none; /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24"%3E%3Cpath d="M7 10l5 5 5-5z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position the arrow */
+    background-size: 24px 24px; /* Size of the arrow */
+}
+
+
 /* Submit Button Styling */
 .submit-btn {
-    width: 100%;
-    padding: 12px;
+    padding: 14px 34px;
     background-color: #1886B9;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 18px;
     cursor: pointer;
+    font-weight: 700;
+    line-height: 21.6px;
     transition: background-color 0.3s;
 }
 
