@@ -60,14 +60,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.contain{
+.contain {
     position: absolute;
-    top: 0;
+    top: 7%;
     width: 100%;
 }
-.bg-img{
-    /* height: 100vh; */
-}
+
 .bg-img .home-img{
     /* aspect-ratio: 16 / 9; */
         object-fit: cover;
@@ -75,25 +73,38 @@ body{
         width: 100%;
         height: auto;
     }
-.main-container{
+.bg-img{
+    display: flex;
+    top: 0;
+    flex-wrap: wrap;
     position: relative;
-
 }
 
-.bg-image {
-    /* background-image: url("../Hi-Life/image/home-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;            
-    background-position:center bottom;    
-    height: 100vh;                     
-    width: 100%;                       */
+/* .main-container{
+} */
+
+.nav-logo{
+    position: absolute;
+    z-index: 1;
 }
 
 .main-container {
     width: 100%;
-    height: 100svh;
+    /* height: 100svh; */
     padding: 30px 52px;
     box-sizing: border-box;
+    /* background-color: black; */
+    background-color: transparent;
+    position: relative;
+}
+.main-container-logo{
+    width: 100%;
+    /* height: 100svh; */
+    padding: 30px 52px;
+    box-sizing: border-box;
+    /* background-color: black; */
+    background-color: transparent;
+    position: relative;
 }
 .container {
     width: 100%;            
@@ -116,6 +127,9 @@ body{
     line-height: 60px;
     font-size: 49.11px;
 }
+.second-section{
+    display: flex;
+}
 .villas{
     background-color: #264756;
     width: calc(50%);
@@ -124,7 +138,7 @@ body{
 .villa-banner {
     position: absolute;
     left: 20%;
-    bottom: 36%;
+    bottom: 40%;
 }
 .apartment-banar {
     position: absolute;
@@ -208,6 +222,12 @@ body{
     padding-top: 46px;
 }
 .bhk-villa{  
+    gap: 90px;
+    padding-top: 60px;
+    display: flex;
+    position: relative;
+}
+.bhk-appart {
     gap: 90px;
     padding-top: 60px;
     display: flex;
@@ -357,6 +377,23 @@ body{
     justify-content: center;
 }
 
+@media (max-width:425px) {
+    .container {
+        width: 100%;
+        padding: 0 3%;
+        box-sizing: border-box;
+    }
+    .main-container {
+        width: 100%;
+        /* height: 100svh; */
+        padding: 30px 52px;
+        box-sizing: border-box;
+        /* background-color: black; */
+        background-color: transparent;
+        position: relative;
+    }
+}
+
 @media screen and (max-width:1310px) {
     .apartment-sec{
         display: flex;
@@ -372,38 +409,38 @@ body{
     .project-highlight{
         gap: 0px;
     }
-    .villa-banner{  
+    /* .villa-banner{  
         display: none;
     }
     .apartment-banar {
        display: none;
-    }
+    } */
     .bhk-villa {
         gap: 25px;
         padding-top: 60px;
         display: flex;
     }
     .title {
-        padding-top: 66.71px;
+        padding-top: 56.71px;
         color: #ffffff;
         font-family: 'Gotham Light', sans-serif;
         font-weight: 700;
-        line-height: 60px;
-        font-size: 40px;
-        max-width: 43rem;
+        line-height: 44px;
+        font-size: 27px;
+        max-width: 34rem;
     }
     .title span {
         color: #ffffff;
         font-family: 'Gotham Light', sans-serif;
         font-weight: 400;
-        line-height: 60px;
-        font-size: 40.11px;
+        line-height: 20px;
+        font-size: 27.11px;
     }
     .second-sec-content {
-        padding-top: 45px;
-        gap: 6rem;
+        padding-top: 26px;
+        gap: 1rem;
         padding-bottom: 0rem;
-    }   
+    }    
     .second-sec-content h2 {
         font-family: 'Gilroy Light', sans-serif;
         font-size: 30.17px;
@@ -457,7 +494,7 @@ body{
         color: #ffffff;
         font-family: 'Gotham Light', sans-serif;
         font-weight: 700;
-        line-height: 60px;
+        line-height: 40px;
         font-size: 27px;
         max-width: 34rem;
     }
@@ -499,6 +536,8 @@ body{
         gap: 13px;
         padding-top: 32px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     .bhk h2 {
         font-size: 18.94px;
@@ -548,8 +587,17 @@ body{
         padding-bottom: 32px;
     }
     .project-highlight {
-        gap: 42px;
-        padding-left: 20px;
+        gap: 20px;
+        /* padding-left: 20px; */
+    }
+    .Pristine-Villas {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 0 25px 0px 25px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        color: #FFFFFF;
     }
     .Pristine-p {
         padding-bottom: 18px;
@@ -561,24 +609,212 @@ body{
     .project-flex {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
+    }
+    .banner-font h4 {
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 22.66px;
+        color: #FFF600;
+    }
+    .banner-font p {
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 25.14px;
+        color: #FFFFFF;
+    }
+    .apartment-banar {
+        position: absolute;
+        top: 10%;
+        right: 3%;
+    }
+    .prox-space {
+        display: flex;
+        width: 37%;
+        flex-direction: column;
+        align-items: center;
     }
 }
 @media (max-width:768px) {
+    .project-highlight {
+        gap: 43px;
+    }
+}
+
+@media (max-width:768px) {
     .title {
-        padding-top: 66.71px;
+        padding-top: 45.71px;
         color: #ffffff;
         font-family: 'Gotham Light', sans-serif;
         font-weight: 700;
-        line-height: 42px;
-        font-size: 20px;
+        line-height: 32px;
+        font-size: 17px;
         max-width: 27rem;
     }
     .title span {
         color: #ffffff;
         font-family: 'Gotham Light', sans-serif;
         font-weight: 400;
-        line-height: 25px;
-        font-size: 20.11px;
+        line-height: 24px;
+        font-size: 17.11px;
+    }
+    .Pristine-Villas {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 0 25px 0px 25px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+        color: #FFFFFF;
+    }
+    
+}
+
+@media (max-width:425px) {
+    .prox-space {
+        display: flex;
+        width: 37%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .title span {
+        color: #ffffff;
+        font-family: 'Gotham Light', sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        font-size: 22.11px;
+    }
+    .title {
+        padding-top: 45.71px;
+        color: #ffffff;
+        font-family: 'Gotham Light', sans-serif;
+        font-weight: 700;
+        line-height: 32px;
+        font-size: 23px;
+        max-width: 25rem;
+    }
+}
+
+@media (max-width:900px) {
+    .banner{
+        width: 50px;
+        height: 58px;
+    }
+    .banner-font p {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 20.14px;
+        color: #FFFFFF;
+    }
+    .banner-font h4 {
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 14.66px;
+        color: #FFF600;
+    }
+    .appartment{
+        width: 50px;
+        height: 58px;
+    }
+    .apartment-banar {
+        position: absolute;
+        top: 16%;
+        right: 6%;
+    }
+}
+
+@media (max-width:669px) {
+    .second-section {
+        display: flex;
+        flex-direction: column;
+    }    
+    .villas{
+        background-color: #264756;
+        width: calc(100%);
+    }
+    .Apartments {
+        background-color: #0794D6;
+        width: calc(100%);
+    }
+    .Pristine-Villas {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        border-radius: 0 25px 0px 25px;
+        padding-top: 25px;
+        padding-bottom: 35px;
+        color: #FFFFFF;
+    }
+    .contain {
+        position: relative;
+        top: 50%;
+        width: 100%;
+    }
+    .banner-font p {
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 19.14px;
+        color: #FFFFFF;
+    }
+    .main-container {
+        width: 100%;
+        /* height: 100svh; */
+        padding: 30px 52px;
+        box-sizing: border-box;
+        background-color: #264756;
+        /* background-color: transparent; */
+        position: relative;
+    }
+    .main-container-logo{
+        width: 100%;
+        /* height: 100svh; */
+        padding: 30px 52px;
+        box-sizing: border-box;
+        /* background-color: black; */
+        background-color: transparent;
+        position: relative;
+    }
+}
+
+@media (max-width:669px) {
+    .villa-banner {
+        position: static;
+        left: 9%;
+        bottom: 23%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5px;
+        text-align: center;
+    }
+    .apartment-banar {
+        position: static;
+        top: 61%;
+        right: 15%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5px;
+        text-align: center;
+    }
+    .title {
+        padding-top: 31.71px;
+        color: #ffffff;
+        font-family: 'Gotham Light', sans-serif;
+        font-weight: 700;
+        line-height: 32px;
+        font-size: 22px;
+        max-width: 27rem;
+    }
+    .bg-img {
+        display: flex;
+        top: 0;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: #264756;
+        justify-content: space-around;
     }
 }
 
@@ -611,22 +847,90 @@ body{
     padding-bottom: 146px;
     color: #153F51;
 }
+@media (max-width:1024px) {
+    .builder h2 {
+        font-family: 'Gilroy Light', sans-serif;
+        font-size: 38px;
+        line-height: 51.34px;
+        padding-top: 45px;
+        padding-bottom: 10px;
+        color: #2A5365;
+    }
+    .builder p {
+        font-family: 'Gotham Light', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30.68px;
+        max-width: 60rem;
+        padding-bottom: 90px;
+        color: #153F51;
+    }
+}
+@media (max-width:768px) {
+    .builder h2 {
+        font-family: 'Gilroy Light', sans-serif;
+        font-size: 38px;
+        line-height: 51.34px;
+        padding-top: 47px;
+        padding-bottom: 8px;
+        color: #2A5365;
+    }
+    .builder p {
+        font-family: 'Gotham Light', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 30.68px;
+        max-width: 60rem;
+        padding-bottom: 98px;
+        color: #153F51;
+    }
+}
+@media (max-width:425px) {
+    .builder p {
+        font-family: 'Gotham Light', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 30.68px;
+        max-width: 60rem;
+        padding-bottom: 51px;
+        color: #153F51;
+    }
+    .builder h2 {
+        font-family: 'Gilroy Light', sans-serif;
+        font-size: 35px;
+        line-height: 51.34px;
+        padding-top: 70px;
+        padding-bottom: 10px;
+        color: #2A5365;
+    }
+    .builder span {
+        font-family: 'Gilroy Light', sans-serif;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 51.34px;
+    }
+}
 
 /* Button */
 .enquire-btn{
     padding-top: 15px;
 }
+/* .enquire-btn {
+    text-decoration: none;
+} */
 .enq-btn{
     padding-bottom: 89px;
 }
-.enquire-btn button{
+.enquire-btn a{
+    text-decoration: none;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 23px;
     padding-left: 23px;
     border-radius: 50px;
     border: none;
-    background: linear-gradient(to right, #9e1212, #CD0F0F);    color: #FFFFFF;
+    background: linear-gradient(to right, #9e1212, #CD0F0F);   
+     color: #FFFFFF;
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
@@ -636,10 +940,77 @@ body{
     .enq-btn {
         padding-bottom: 50px;
     }
+    .enquire-btn button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-radius: 50px;
+        border: none;
+        background: linear-gradient(to right, #9e1212, #CD0F0F);
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 24px;
+        font-family: 'Gotham bold', sans-serif;
+    }
+    .enq-btn {
+        padding-bottom: 7px;
+    }
+}
+@media (max-width:1024px) {
+    .enquire-btn button {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 50px;
+        border: none;
+        background: linear-gradient(to right, #9e1212, #CD0F0F);
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: 900;
+        line-height: 18px;
+        font-family: 'Gotham bold', sans-serif;
+    }
+    .enquire-btn {
+        padding-top: 0px;
+    }
+}
+@media (max-width:768px) {
+    .enquire-btn {
+        padding-top: 9px;
+    }
+}
+@media (max-width:425px) {
+    .enquire-btn {
+        padding-top: 16px;
+        padding-bottom: 18px;
+    }
+    .enq-btn {
+        padding-bottom: 17px;
+    }
+}
+@media (max-width:320px) {
+    .enquire-btn a {
+        text-decoration: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 23px;
+        padding-left: 23px;
+        border-radius: 50px;
+        border: none;
+        background: linear-gradient(to right, #9e1212, #CD0F0F);
+        color: #FFFFFF;
+        font-size: 11px;
+        font-weight: 900;
+        line-height: 24px;
+        font-family: 'Gotham bold', sans-serif;
+    }
 }
 
 .th {
-    background-image: url('../Hi-Life/image/fourth-bg.png'); /* Set the image as background */
+    background-image: url('image/fourth-bg.png'); /* Set the image as background */
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat; 
@@ -690,7 +1061,7 @@ body{
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding-left: 43px;
-    padding-right: 76px;  
+    padding-right: 43px;  
     padding-top: 47px; 
     z-index: 1;
     margin-top: -60px;
@@ -785,7 +1156,7 @@ body{
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding-left: 43px;
-        padding-right: 64px;
+        padding-right: 43px;
         padding-top: 24px;
         z-index: 1;
         margin-top: -71px;
@@ -857,18 +1228,78 @@ body{
         border-radius: 4px;
         font-size: 16px;
     }
+    .submit-btn {
+        padding: 10px 20px;
+        background-color: #1886B9;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: 700;
+        line-height: 21.6px;
+        transition: background-color 0.3s;
+    }
 }
-@media (max-width: 480px) {
+@media (max-width:425px) {
+    .dream h3 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        line-height: 46.02px;
+        font-weight: 500;
+        color: #FFFFFF;
+        max-width: 39rem;
+        padding-top: 75px;
+    }
     .form-container {
         padding: 20px;
         width: 100%;
+        margin: 0;
         max-width: 320px;
+    }
+}
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .form-group {
+        position: relative;
+        padding-top: 19px;
+        z-index: 1;
+        /* padding-right: 39px; */
+    }
+    .form-group input, 
+    .form-group textarea {
+        width: 100%;
+        padding: 15px 10px 10px; 
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    .form-group label {
+        position: absolute;
+        top: 11px;
+        left: 12px;
+        background-color: #fff;
+        padding: 0 4px;
+        font-size: 0.7em;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
     }
 }
 
 /* .footer{
 
 } */
+
+.fot-flex {
+    display: flex;
+    gap: 83px;
+    flex-wrap: wrap;
+    padding-top: 9rem;
+}
 
 .fot-contact{
     gap: 125px;
@@ -903,6 +1334,10 @@ body{
 .Privacy{
     padding-top: 59px;
     gap: 226px;
+}
+.Privacy a{
+    text-decoration: none;
+    color: #153F51;
 }
 .Privacy p{
     font-family: 'Gotham Light', sans-serif; 
@@ -955,3 +1390,97 @@ body{
         padding-bottom: 25px;
     }
 }
+
+@media (max-width:768px) {
+    .fot-flex {
+        display: flex;
+        gap: 83px;
+        flex-wrap: wrap;
+        padding-top: 9rem;
+    }
+    .Privacy {
+        padding-top: 57px;
+        gap: 222px;
+    }
+    /* .flex-end {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .Privacy {
+        padding-top: 59px;
+        gap: 10px;
+    }
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    } */
+}
+@media (max-width:425px) {
+    .fot-flex {
+        display: flex;
+        gap: 31px;
+        flex-wrap: wrap;
+        padding-top: 38rem;
+    }  
+    .flex-end {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+    .Privacy {
+        padding-top: 59px;
+        gap: 10px;
+    }
+    .flex-between {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+/* Thank You Page */
+.nav-bg{
+    background-color: #0794D6;
+}
+.thankyouBlock{
+    text-align: center;
+}
+.thankyouBlock h1{
+    color: #37bd42;
+    font-size: 50px;
+}
+.p-tag{
+    font-size: 30px;
+}
+.page-wrapper {
+    margin: 40px 0px;
+    min-height: 450px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.thank-btn{
+    padding-top: 20px;
+}
+.thank-btn a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.thank-btn a:hover{
+    text-decoration: none;
+    color: #0794D6;
+}
+.thank-btn button{
+    padding: 10px;
+    background-color: #0794D6;
+    border: none;
+    border-radius: 10px;
+}
+.thank-btn button:hover{
+    background-color: #ffffff;
+
+}
+

@@ -16,26 +16,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = $_POST['phone'];
     $subject = $_POST['subject'];
     $message = $_POST['message'];
+    $projectTitle = $_POST['projectTitle'];
 
 
     $template = file_get_contents('./enquirymailtemplate.php');
-    $template = str_replace(['{{name}}', '{{email}}', '{{phone}}',  '{{subject}}','{{message}}'], [$name, $email, $subject, $phone, $message], $template);
-
+    $template = str_replace(['{{name}}', '{{email}}', '{{phone}}',  '{{subject}}', '{{message}}', '{{projectTitle}}'], [$name, $email, $subject, $phone, $message, $projectTitle], $template);
+   
     // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
 
     try {
-        // Use PHP's default mail() function
         $mail->isMail();
 
         // Recipient and sender settings
         $mail->setFrom('hilife@landing.acodez.ca', 'Hi Life');
-        $mail->addAddress('archana.p@acodez.co.in');
-        $mail->addCC('hilifesales@gmail.com');
+        $mail->addAddress('hilifesales@gmail.com');
+        $mail->addCC('archana.p@acodez.co.in');
+        $mail->addBCC('ads@acodez.in');
+
+        $title = $projectTitle ?: "General";
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'New Enquiry';
+        $mail->Subject = 'New Enquiry - ' . $title;
         $mail->Body    = $template;
         $mail->AltBody = "Name: $name\nEmail: $email\nMessage:\n$message\n Phone: $phone\n Subject: $subject\n";
 

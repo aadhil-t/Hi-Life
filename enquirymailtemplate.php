@@ -10,7 +10,7 @@
                 <tr>
                     <td align="left" valign="top" style="background-color:#FFF; padding:20px;">
                         <p style="color:#504e4e; font-size:16px;text-align:center;"><span class="footer">
-                                <strong>New Enquiry</strong></span></p>
+                                <strong>New Enquiry - {{projectTitle}}</strong></span></p>
                         <table width="100%" border="0" cellspacing="2" cellpadding="4">
                             <tr>
                                 <td align="left" valign="middle" style="border-bottom:1px solid #e2dfd9;">Name</td>
