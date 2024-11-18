@@ -37,4 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Form or response message element not found");
   }
+
+
+  //    CAROUSEL    //
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function moveToNextSlide() {
+  currentIndex = (currentIndex + 1) % totalItems;
+  updateCarouselPosition();
+}
+
+function updateCarouselPosition() {
+  const carousel = document.querySelector('.carousel');
+  const offset = -currentIndex * 100; 
+ carousel.style.transform = `translateX(${offset}%)`;
+}
+
+// Auto-scroll every 3 seconds
+setInterval(moveToNextSlide, 4000);
+
 });
+

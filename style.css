@@ -14,7 +14,7 @@
 @font-face {
     font-family: 'Gotham bold';
     src: url('/assets/Gotham-Bold.otf') format('opentype');
-    font-weight: 400; /* Adjust this if necessary */
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -98,6 +98,15 @@ body{
     position: relative;
 }
 .main-container-logo{
+    width: 100%;
+    /* height: 100svh; */
+    padding: 30px 52px;
+    box-sizing: border-box;
+    /* background-color: black; */
+    background-color: transparent;
+    position: relative;
+}
+.carousel-container-logo{
     width: 100%;
     /* height: 100svh; */
     padding: 30px 52px;
@@ -778,7 +787,16 @@ body{
     .main-container-logo{
             width: 100%;
             /* height: 100svh; */
-            padding: 20px 20px;
+            padding: 20px 10px;
+            box-sizing: border-box;
+            /* background-color: black; */
+            background-color: transparent;
+            position: relative;
+        }
+    .carousel-container-logo{
+            width: 100%;
+            /* height: 100svh; */
+            padding: 18px 30px;
             box-sizing: border-box;
             /* background-color: black; */
             background-color: transparent;
@@ -990,8 +1008,17 @@ body{
     }
 }
 @media (max-width:768px) {
+    .enquire-btn.top-btn {
+        padding-top: 22px;
+        padding-bottom: 10px;
+    }
     .enquire-btn {
         padding-top: 9px;
+        padding-bottom: 10px;
+    }
+    .enquire-btn.top-btn{
+        padding-top: 9px;
+        padding-bottom: 10px;
     }
 }
 @media (max-width:425px) {
@@ -1037,14 +1064,15 @@ body{
 }
 
 .th {
-    background-image: url('image/fourth-bg.png'); /* Set the image as background */
-    background-size: cover; 
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-color: #1886B9; 
-    position: relative; 
-    width: 100%; 
-    height: 376px;
+    background-image: url(image/fourth-bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #1886B9;
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 376px;
 }
 
 .th::before {
@@ -1226,6 +1254,18 @@ body{
 }
 
 @media (max-width:904px) {
+    .th {
+        background-image: url(image/fourth-bg.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: #1886B9;
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        padding-bottom: 25px;
+    }
     .dream h3 {
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
@@ -1282,7 +1322,7 @@ body{
     .dream h3 {
         font-family: 'Poppins', sans-serif;
         font-size: 24px;
-        line-height: 46.02px;
+        line-height: 30.02px;
         font-weight: 500;
         color: #FFFFFF;
         max-width: 39rem;
@@ -1293,6 +1333,16 @@ body{
         width: 100%;
         margin: 0;
         max-width: 320px;
+    }
+    .dream p {
+        font-family: 'Gotham Light', sans-serif;
+        font-size: 15px;
+        line-height: 27.79px;
+        font-weight: 400;
+        color: #FFFFFF;
+        max-width: 28rem;
+        padding-top: 13px;
+        padding-bottom: 58px;
     }
 }
 @media (max-width: 480px) {
@@ -1394,7 +1444,7 @@ body{
 @media (max-width:904px) {
     .fot-contact {
         gap: 119px;
-        padding-top: 70%;
+        padding-top: 10%;
         align-items: center;
     }
     .locate-us h3 {
@@ -1458,7 +1508,7 @@ body{
     .fot-flex {
         display: flex;
         gap: 31px;
-        padding-top: 33rem;
+        padding-top: 10%;
         flex-wrap: wrap;
         align-content: flex-start;
         align-items: flex-start;
@@ -1483,7 +1533,7 @@ body{
     .fot-flex {
         display: flex;
         gap: 31px;
-        padding-top: 38rem;
+        padding-top: 10%;
         flex-wrap: wrap;
         align-content: flex-start;
         align-items: flex-start;
@@ -1549,3 +1599,66 @@ body{
 
 }
 
+
+/*    CAROUSEL STYLE    */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 1s ease;
+    height: 100%;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+  }
+
+  .carousel-item img{
+    object-fit: cover;
+    width: 100%;
+    display: block;
+    height: 100%;
+  }
+  
+  .carousel-container:hover .carousel {
+    animation-play-state: paused;
+  }
+ .slider-text{
+    font-family: 'Gotham bold', sans-serif;
+    position: absolute;
+    top: 154px;
+    text-align: start;
+    padding: 0px 30px;
+    width: 100%;
+ }
+ .slider-text h2{
+    font-size: 39.53px;
+    line-height:48.4px;
+    font-weight: 700;
+  }
+ .slider-text span{
+    font-size: 39.53px;
+    line-height:48.4px;
+    font-weight: 400;
+  }
+
+  @media (max-width:375px) {
+    .slider-text h2 {
+        font-size: 25.53px;
+        line-height: 48.4px;
+        font-weight: 700;
+    }
+    .slider-text span {
+        font-size: 25.53px;
+        line-height: 48.4px;
+        font-weight: 400;
+    }
+  }
