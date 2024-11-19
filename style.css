@@ -386,6 +386,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+.mobile-view {
+    display: none;
+}
 
 @media (max-width:425px) {
     .container {
@@ -401,6 +404,14 @@ body{
         /* background-color: black; */
         background-color: transparent;
         position: relative;
+    }
+}
+@media (max-width:425px) {
+    .mobile-view{
+        display: block;
+    }
+    .desktop-view{
+        display: none;
     }
 }
 
@@ -1006,6 +1017,21 @@ body{
     .enquire-btn {
         padding-top: 0px;
     }
+    .enquire-btn a {
+        text-decoration: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-radius: 50px;
+        border: none;
+        background: linear-gradient(to right, #9e1212, #CD0F0F);
+        color: #FFFFFF;
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 24px;
+        font-family: 'Gotham bold', sans-serif;
+    }
 }
 @media (max-width:768px) {
     .enquire-btn.top-btn {
@@ -1020,6 +1046,7 @@ body{
         padding-top: 9px;
         padding-bottom: 10px;
     }
+    
 }
 @media (max-width:425px) {
     .enquire-btn {
@@ -1634,10 +1661,13 @@ body{
  .slider-text{
     font-family: 'Gotham bold', sans-serif;
     position: absolute;
+    color: #FFFFFF;
     top: 154px;
     text-align: start;
     padding: 0px 30px;
     width: 100%;
+    position: absolute;
+    z-index: 1;
  }
  .slider-text h2{
     font-size: 39.53px;
